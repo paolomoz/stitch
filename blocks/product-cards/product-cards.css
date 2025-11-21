@@ -95,7 +95,8 @@
   color: inherit !important;
 }
 
-.product-card .button {
+.product-card .button,
+.product-card a.button {
   width: 100%;
   margin-top: 1rem;
   display: flex;
@@ -103,17 +104,23 @@
   justify-content: center;
   height: 3rem;
   padding: 0 1.5rem;
-  background: #4CAF50;
-  color: white;
+  background: #4CAF50 !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
   font-size: 1rem;
   font-weight: 700;
   border-radius: 9999px;
   text-decoration: none;
   transition: opacity 0.2s;
+  border: none;
 }
 
-.product-card .button:hover {
+.product-card .button:hover,
+.product-card a.button:hover {
   opacity: 0.9;
+  background: #4CAF50 !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
 }
 
 @media (min-width: 768px) {
