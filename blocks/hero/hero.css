@@ -1,37 +1,151 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
+/* Hero container overrides */
+.hero-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
+.hero-wrapper {
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Main hero block */
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
-}
-
-.hero img {
-  object-fit: cover;
+/* Hero content wrapper */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  max-width: 100%;
 }
 
-@media (width >= 900px) {
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Typography */
+.hero-heading {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.033em;
+  margin: 0;
+  max-width: 100%;
+}
+
+.hero-subheading {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 36rem;
+}
+
+/* CTA Button */
+.hero-cta,
+.hero .hero-cta.button,
+.hero a.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  max-width: 480px;
+  height: 3rem;
+  padding: 0 1.5rem;
+  background: #4CAF50 !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: none;
+}
+
+.hero-cta:hover,
+.hero .hero-cta.button:hover,
+.hero a.hero-cta:hover {
+  opacity: 0.9;
+  background: #4CAF50 !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+/* Remove default picture styling */
+.hero picture {
+  display: none;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 480px) {
   .hero {
-    padding: 40px 32px;
+    gap: 2rem;
+  }
+  
+  .hero-heading {
+    font-size: 3.75rem;
+  }
+  
+  .hero-subheading {
+    font-size: 1.125rem;
+  }
+  
+  .hero-cta {
+    height: 3.5rem;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 2rem;
   }
 }
